@@ -5,7 +5,7 @@ export const GET = async (request) => {
     try {
         await connectToDB();
 
-        res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
+        // res.setHeader("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
 
         const prompts = await Prompt.find({}).populate('creator');
 
