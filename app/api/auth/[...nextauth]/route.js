@@ -5,6 +5,7 @@ import User from "@models/user";
 import { connectToDB } from "@utils/database";
 
 const handler = NextAuth({
+    debug: true,
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_ID,
